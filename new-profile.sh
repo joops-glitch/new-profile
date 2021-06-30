@@ -18,6 +18,7 @@ sudo apt install google-chrome-stable -y
 sudo dkpg --install ~/Downloads/keybase_amd64.deb
 
 sudo snap install --classic code
+sudo snap install --classic godot
 sudo snap install --classic discord
 
 cp ./.zshrc ~/.zshrc
