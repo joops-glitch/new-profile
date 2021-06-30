@@ -1,7 +1,7 @@
 #!/bin/bash
 echo y | sudo add-apt-repository universe
 sudo apt-get update
-sudo apt-get install vim git zsh curl gnome-tweak tool powerline-fonts -y
+sudo apt-get install vim git zsh curl gnome-tweak tool powerline-fonts sddm -y
 sudo sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/vinceliuice/Orchis-theme.git ~/Downloads/orchis/
 ~/Downloads/orchis/install.sh -t purple
