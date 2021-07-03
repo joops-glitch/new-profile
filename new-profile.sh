@@ -2,7 +2,8 @@
 echo y | sudo add-apt-repository universe
 echo y | sudo add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner"
 sudo apt-get update
-sudo apt-get install vim git zsh curl gnome-tweaks powerline-fonts vlc -y
+sudo apt-get install vim git zsh curl gnome-tweaks powerline-fonts vlc sudo apt-get install python3-pip -y
+sudo pip install powerline-status
 sudo sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/vinceliuice/Orchis-theme.git ~/Downloads/orchis/
 ~/Downloads/orchis/install.sh -t purple
@@ -15,7 +16,7 @@ wget https://prerelease.keybase.io/keybase_amd64.deb -P ~/Downloads/
 
 wget https://packages.expandrive.com/expandrive/pool/stable/e/ex/ExpanDrive_2021.6.2_amd64.deb -P ~/Downloads/
 
-sudo apt update
+sudo apt updatef
 
 sudo apt install google-chrome-stable -y
 sudo dkpg --install ~/Downloads/keybase_amd64.deb
