@@ -14,13 +14,10 @@ sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable
 
 wget https://prerelease.keybase.io/keybase_amd64.deb -P ~/Downloads/
 
-wget https://packages.expandrive.com/expandrive/pool/stable/e/ex/ExpanDrive_2021.6.2_amd64.deb -P ~/Downloads/
-
-sudo apt updatef
+sudo apt update
 
 sudo apt install google-chrome-stable -y
 sudo dkpg --install ~/Downloads/keybase_amd64.deb
-sudo dpkg --install ~/Downloads/ExpanDrive_2021.6.2_amd64.deb
 
 sudo snap install --classic code
 sudo snap install --classic godot
