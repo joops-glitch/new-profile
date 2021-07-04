@@ -67,6 +67,13 @@ sudo dkpg --install ~/Downloads/keybase_amd64.deb
 
 sudo snap install --classic code
 sudo snap install --classic godot
+
+## Big assumption that gtksourceview-4 is in use and not some other version
+sudo cp ./phedit.xml /usr/share/gtksourceview-4/styles/phedit.xml
+
 dconf load / <./saved-profile.dconf
+dconf load / <./phirminal.dconf
+
+
 
 gsettings set org.gnome.desktop.background picture-uri file:////usr/share/backgrounds/mariya-takeuchi.jpg

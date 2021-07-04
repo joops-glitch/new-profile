@@ -6,6 +6,24 @@ launch-time=int64 1625355585
 [com/ubuntu/update-notifier]
 release-check-time=uint32 1625342233
 
+[legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+audible-bell=true
+background-color='rgb(19,4,26)'
+bold-color='rgb(0,228,255)'
+bold-color-same-as-fg=false
+cursor-background-color='rgb(162,42,218)'
+cursor-colors-set=true
+cursor-foreground-color='rgb(45,13,60)'
+cursor-shape='block'
+font='Hack 12'
+foreground-color='rgb(179,247,255)'
+highlight-background-color='rgb(45,13,60)'
+highlight-colors-set=true
+highlight-foreground-color='rgb(174,24,244)'
+use-system-font=false
+use-theme-colors=false
+visible-name='Phirminal'
+
 [org/gnome/control-center]
 last-panel='background'
 
@@ -40,6 +58,7 @@ xkb-options=@as []
 [org/gnome/desktop/interface]
 clock-show-seconds=false
 clock-show-weekday=true
+cursor-theme='Yaru'
 gtk-enable-primary-paste=false
 gtk-im-module='gtk-im-context-simple'
 gtk-theme='Orchis-purple-dark-compact'
@@ -48,11 +67,20 @@ show-battery-percentage=true
 [org/gnome/desktop/notifications]
 application-children=['org-gnome-gedit', 'firefox', 'snap-store-ubuntu-software']
 
+[org/gnome/desktop/notifications/application/chrome-hpfldicfbfomlpcikngkocigghgafkph-default]
+application-id='chrome-hpfldicfbfomlpcikngkocigghgafkph-Default.desktop'
+
 [org/gnome/desktop/notifications/application/firefox]
 application-id='firefox.desktop'
 
+[org/gnome/desktop/notifications/application/google-chrome]
+application-id='google-chrome.desktop'
+
 [org/gnome/desktop/notifications/application/org-gnome-gedit]
 application-id='org.gnome.gedit.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-terminal]
+application-id='org.gnome.Terminal.desktop'
 
 [org/gnome/desktop/notifications/application/snap-store-ubuntu-software]
 application-id='snap-store_ubuntu-software.desktop'
@@ -61,6 +89,7 @@ application-id='snap-store_ubuntu-software.desktop'
 two-finger-scrolling-enabled=true
 
 [org/gnome/desktop/privacy]
+disable-microphone=false
 report-technical-problems=true
 
 [org/gnome/desktop/screensaver]
@@ -86,7 +115,8 @@ tree-view=true
 virtual-root='file:///home/phiaboo'
 
 [org/gnome/gedit/preferences/editor]
-scheme='tango'
+editor-font='Hack 12'
+scheme='phi-edit'
 use-default-font=false
 wrap-last-split-mode='word'
 
@@ -106,6 +136,9 @@ side-panel-active-page='GeditWindowDocumentsPanel'
 side-panel-size=200
 size=(1848, 1006)
 state=43908
+
+[org/gnome/mutter]
+overlay-key='Super_L'
 
 [org/gnome/nautilus/preferences]
 default-folder-viewer='icon-view'
@@ -146,6 +179,28 @@ online-updates-timestamp=int64 1625357456
 
 [org/gnome/system/location]
 enabled=true
+
+[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+audible-bell=true
+background-color='rgb(19,4,26)'
+bold-color='rgb(0,228,255)'
+bold-color-same-as-fg=false
+cursor-background-color='rgb(162,42,218)'
+cursor-colors-set=true
+cursor-foreground-color='rgb(45,13,60)'
+cursor-shape='block'
+font='Hack 12'
+foreground-color='rgb(179,247,255)'
+highlight-background-color='rgb(45,13,60)'
+highlight-colors-set=true
+highlight-foreground-color='rgb(174,24,244)'
+use-system-font=false
+use-theme-colors=false
+visible-name='Phirminal'
+
+[org/gtk/settings/color-chooser]
+custom-colors=[(0.1764705882352941, 0.050980392156862717, 0.23529411764705882, 1.0), (1.0, 0.0, 0.0, 1.0), (0.68187943262411366, 0.09566666666666665, 0.95666666666666678, 1.0), (0.94054615958240129, 0.034711111111111075, 0.94666666666666677, 1.0), (0.0, 1.0, 0.63758389261744952, 1.0), (0.0, 0.89473684210526372, 1.0, 1.0), (0.39333333333333331, 0.93614035087719327, 1.0, 1.0), (0.17517676767676765, 0.050555555555555555, 0.23333333333333334, 1.0)]
+selected-color=(true, 0.0, 0.89473684210526372, 1.0, 1.0)
 
 [org/gtk/settings/file-chooser]
 date-format='regular'

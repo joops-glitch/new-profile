@@ -1,0 +1,17 @@
+[legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+audible-bell=true
+background-color='rgb(19,4,26)'
+bold-color='rgb(0,228,255)'
+bold-color-same-as-fg=false
+cursor-background-color='rgb(162,42,218)'
+cursor-colors-set=true
+cursor-foreground-color='rgb(45,13,60)'
+cursor-shape='block'
+font='Hack 12'
+foreground-color='rgb(179,247,255)'
+highlight-background-color='rgb(45,13,60)'
+highlight-colors-set=true
+highlight-foreground-color='rgb(174,24,244)'
+use-system-font=false
+use-theme-colors=false
+visible-name='Phirminal'
