@@ -4,6 +4,7 @@
 UNIVERSE_EXIST=`egrep -v '^#|^ *$' /etc/apt/sources.list /etc/apt/sources.list.d/* | grep universe`
 PARTNER_EXIST=`egrep -v '^#|^ *$' /etc/apt/sources.list /etc/apt/sources.list.d/* | grep partner`
 CHROME_EXIST=`egrep -v '^#|^ *$' /etc/apt/sources.list /etc/apt/sources.list.d/* | grep chrome`
+OHMYZSH_EXIST=`ls /home/phiaboo/.oh-my-zsh`
 
 if [ ! -z "$PARTNER_EXIST" ]
 then
@@ -31,8 +32,15 @@ sudo apt-get install -f vim git zsh curl gnome-tweaks fonts-powerline fonts-hack
 
 cp ./.zshrc ~/.zshrc
 
-wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -P ~/Downloads/zsh/
-sh ~/Downloads/zsh/install.sh --unattended
+if [ ! -z "$OHMYZSH_EXIST" ]
+then
+    echo oh-my-zsh already installed!
+else
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+fi
+
+#wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -P ~/Downloads/zsh/
+#sh ~/Downloads/zsh/install.sh --unattended
 
 chsh -s $(which zsh)
 
@@ -53,9 +61,12 @@ sudo snap install --classic godot
 sudo snap install --classic discord
 sudo snap install --classic spotify
 
-cp ./mariya-takeuchi.jpg ~/Pictures
+sudo cp -f ./mariya-takeuchi.jpg /usr/share/backgrounds/
 
-gsettings set org.gnome.shell favorite-apps ['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'org.gnome.Terminal.desktop', 'code_code.desktop', 'godot_godot.desktop', 'steam.desktop', 'snap-store_ubuntu-software.desktop', 'keybase.desktop', 'discord_discord.desktop', 'chrome-hpfldicfbfomlpcikngkocigghgafkph-Default.desktop', 'spotify_spotify.desktop']
+sudo dkpg --install ~/Downloads/keybase_amd64.deb
 
-cd ~
-dconf load / < saved_settings.dconf
+sudo snap install --classic code
+sudo snap install --classic godot
+dconf load / <./saved-profile.dconf
+
+gsettings set org.gnome.desktop.background picture-uri file:////usr/share/backgrounds/mariya-takeuchi.jpg
