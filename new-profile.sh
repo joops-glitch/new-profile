@@ -27,7 +27,7 @@ else
 fi
 
 sudo apt-get update
-sudo apt-get install -f vim git zsh curl gnome-tweaks fonts-powerline fonts-hack-ttf vlc python3-pip -y
+sudo apt-get install -f vim git zsh curl gnome-tweaks fonts-powerline fonts-hack-ttf vlc python3-pip steam -y
 
 cp ./.zshrc ~/.zshrc
 
@@ -52,3 +52,10 @@ sudo snap install --classic code
 sudo snap install --classic godot
 sudo snap install --classic discord
 sudo snap install --classic spotify
+
+cp ./mariya-takeuchi.jpg ~/Pictures
+
+gsettings set org.gnome.shell favorite-apps ['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'org.gnome.Terminal.desktop', 'code_code.desktop', 'godot_godot.desktop', 'steam.desktop', 'snap-store_ubuntu-software.desktop', 'keybase.desktop', 'discord_discord.desktop', 'chrome-hpfldicfbfomlpcikngkocigghgafkph-Default.desktop', 'spotify_spotify.desktop']
+
+cd ~
+dconf load / < saved_settings.dconf
