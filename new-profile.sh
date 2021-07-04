@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#apparently a helper function to get the path of the script being run
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+
 #checking for repos
 UNIVERSE_EXIST=`egrep -v '^#|^ *$' /etc/apt/sources.list /etc/apt/sources.list.d/* | grep universe`
 PARTNER_EXIST=`egrep -v '^#|^ *$' /etc/apt/sources.list /etc/apt/sources.list.d/* | grep partner`
@@ -30,6 +33,7 @@ fi
 sudo apt-get update
 sudo apt-get install -f vim git zsh curl gnome-tweaks fonts-powerline fonts-hack-ttf vlc python3-pip steam tilix -y
 
+cd "$parent_path"
 cp ./.zshrc ~/.zshrc
 
 if [ ! -z "$OHMYZSH_EXIST" ]
@@ -61,6 +65,7 @@ sudo snap install --classic godot
 sudo snap install --classic discord
 sudo snap install --classic spotify
 
+cd "$parent_path"
 sudo cp -f ./mariya-takeuchi.jpg /usr/share/backgrounds/
 
 sudo dkpg --install ~/Downloads/keybase_amd64.deb
@@ -69,8 +74,10 @@ sudo snap install --classic code
 sudo snap install --classic godot
 
 ## Big assumption that gtksourceview-4 is in use and not some other version
+cd "$parent_path"
 sudo cp ./phedit.xml /usr/share/gtksourceview-4/styles/phedit.xml
 
+cd "$parent_path"
 dconf load / <./saved-profile.dconf
 dconf load / <./phirminal.dconf
 
