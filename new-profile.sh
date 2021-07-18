@@ -31,7 +31,7 @@ else
 fi
 
 sudo apt-get update
-sudo apt-get install -f vim git zsh curl gnome-tweaks fonts-powerline fonts-hack-ttf vlc python3-pip steam tilix -y
+sudo apt-get install -f vim git zsh curl gnome-tweaks fonts-powerline fonts-hack-ttf vlc python3-pip steam tilix sassc -y
 
 cd "$parent_path"
 cp ./.zshrc ~/.zshrc
